@@ -18,7 +18,7 @@ Email: **ryan.jones@ama.ab.ca**
 * Before OAuth2 - The Dark Times
 * How AMA is like Google (no joke!)
 * Why OAuth2 Rocks
-  * No Password Ferrying
+  * Password Security
   * Supported Platforms
   * Scopes
   * Revoke Tokens
@@ -51,7 +51,7 @@ Email: **ryan.jones@ama.ab.ca**
   * Complicated
   * Lack of adoption
   * Big corporations (Banks, IBM, etc.)
-  * Oldhat
+  * Oldhat (2005)
 
 !SLIDE left
 
@@ -75,17 +75,21 @@ Email: **ryan.jones@ama.ab.ca**
 
 # Why OAuth2 Rocks
 
+####Password Security
+
 * No password ferrying (authorization_code)
 <img src="images/no-ferry.jpg" style="height: 400px; padding-left:200px;"/>
 
 * Login directly through AMA
-![](images/oauth_login.png)
+<img src="images/oauth_login.png" style="height: 400px; padding-left:200px;"/>
 
 !SLIDE left
 
 # Why OAuth2 Rocks
 
-* Support platforms.. All the platforms (grant_types)!
+####Supported platforms
+
+* All of the platforms (grant_types)  
   * Native Mobile (iOS/Android/BB)
   * Web apps
   * Javascript (1 page apps/ajax)
@@ -98,7 +102,7 @@ Email: **ryan.jones@ama.ab.ca**
 
 # Why OAuth2 Rocks
 
-* Scopes
+####Scopes
 
   * Explicit - Users know what they're allowing 3rd party apps to access
   <img src="images/oauth-additionalscope.png" style="height: 700px;"/>
@@ -109,9 +113,11 @@ Email: **ryan.jones@ama.ab.ca**
 
 # Why OAuth2 Rocks 
 
-* Revoke Tokens
-  * Application
-  * User
+####Revoke Tokens
+
+  * Only tokens are stored on devices or 3rd parties
+  * Revoke Application
+  * Revoke User's specific token (iPhone/Web/iPad)
   <br/>
   <br/>
   <br/>
@@ -121,8 +127,9 @@ Email: **ryan.jones@ama.ab.ca**
 
 # Why OAuth2 Rocks
 
-* Libraries
-  * http://oauth.net/code/ - All the languages!
+####Libraries
+
+  * http://oauth.net/code/ - Developers developers developers
   <br/>
   <br/>
   <br/>
@@ -130,14 +137,14 @@ Email: **ryan.jones@ama.ab.ca**
 
 !SLIDE left
 
-* Questions? Comments?
+# Questions? Comments?
+
   <br/>
   <br/>
   <br/>
   <br/>
   <br/>
-  
-    <img src="images/question_mark.png" style="height: 700px; padding-left:200px"/>
+  <img src="images/question_mark.png" style="height: 700px; padding-left:200px"/>
 
 !SLIDE left
 
