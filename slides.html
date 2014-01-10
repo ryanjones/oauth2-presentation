@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>oauth2-presentation</title>
+    <meta charset='utf-8'>
+    <meta content='width=1024, user-scalable=no' name='viewport'>
+    <!-- deck.js's core css -->
+    <link href="deck.js/core/deck.core.css" rel="stylesheet" type="text/css"/>
+    <!-- deck.js extension CSS files -->
+    <link href="deck.js/extensions/codemirror/deck.codemirror.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/goto/deck.goto.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/hash/deck.hash.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/menu/deck.menu.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/navigation/deck.navigation.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/scale/deck.scale.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/status/deck.status.css" rel="stylesheet" type="text/css"/>
+    <!-- all css in the css dir: Keydown CSS, your custom CSS, and themes from deck.js -->
+    <link href="css/keydown.css" rel="stylesheet" type="text/css"/>
+    <link href="css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="css/horizontal-slide.css" rel="stylesheet" type="text/css"/>
+    <link href="css/oauth2-presentation.css" rel="stylesheet" type="text/css"/>
+    <link href="css/swiss.css" rel="stylesheet" type="text/css"/>
+    <!-- Modernizr (provided for legacy browsers) -->
+    <script src="deck.js/support/modernizr.custom.js" type="text/javascript"></script>
+  </head>
+  <body class='deck-container keydown'>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <p><img src="images/oauth2_logo.png" alt="" /></p>
+        
+        <h3>Central authentication done right.</h3>
+        
+        <p>Name: <strong>Ryan Jones</strong><br/>
+        Position: <strong>Manager, Web Development</strong>  <br/>
+        Email: <strong>ryan.jones@ama.ab.ca</strong></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Overview</h1>
+        
+        <ul>
+        <li>Why is Central Authentication Important?</li>
+        <li>Before OAuth2 - The Dark Times</li>
+        <li>How AMA is like Google (no joke!)</li>
+        <li>Why OAuth2 Rocks
+        
+        <ul>
+        <li>No Password Ferrying</li>
+        <li>Supported Platforms</li>
+        <li>Scopes</li>
+        <li>Revoke Tokens</li>
+        <li>Libraries</li>
+        </ul>
+        </li>
+        <li>Questions? Comments?</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Why is Central Authentication Important?</h1>
+        
+        <ul>
+        <li>1 Login / 1 Password</li>
+        <li>Change settings in 1 place (subscriptions, 2 factor, avatar, etc.)</li>
+        <li>Imagine making 1 login per google service (yikes!)</li>
+        </ul>
+        
+        
+        <br/>
+        
+        
+        <br/>
+        
+        
+        <p>  <img src="images/g_apps.png" style="height: 700px; padding-left: 100px;"/></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Before OAuth2 - The Dark Times</h1>
+        
+        <ul>
+        <li>Passing email/password (ferry passwords)
+        
+        <ul>
+        <li>3rd parties getting hacked</li>
+        </ul>
+        </li>
+        <li>OAuth1
+        
+        <ul>
+        <li>Lack of Platform support (mobile, javascript, etc.)</li>
+        <li>HMAC Signatures??</li>
+        </ul>
+        </li>
+        <li>SAML 1.1/2.0
+        
+        <ul>
+        <li>Complicated</li>
+        <li>Lack of adoption</li>
+        <li>Big corporations (Banks, IBM, etc.)</li>
+        <li>Oldhat</li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>How AMA is like Google</h1>
+        
+        <ul>
+        <li>Google wants you to use your Google Account</li>
+        <li>Google wants partner apps to interact with their API's - $$$</li>
+        </ul>
+        
+        
+        <p><img src="images/google-circle.png" alt="" /></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>How AMA is like Google</h1>
+        
+        <ul>
+        <li>AMA wants you to use your AMA Account</li>
+        <li>AMA wants partner apps to interact with their API's - :)</li>
+        </ul>
+        
+        
+        <p><img src="images/ama-circle.png" alt="" /></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Why OAuth2 Rocks</h1>
+        
+        <ul>
+        <li><p>No password ferrying (authorization_code)
+        <img src="images/no-ferry.jpg" style="height: 400px; padding-left:200px;"/></p></li>
+        <li><p>Login directly through AMA
+        <img src="images/oauth_login.png" alt="" /></p></li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Why OAuth2 Rocks</h1>
+        
+        <ul>
+        <li>Support platforms.. All the platforms (grant_types)!
+        
+        <ul>
+        <li>Native Mobile (iOS/Android/BB)</li>
+        <li>Web apps</li>
+        <li>Javascript (1 page apps/ajax)</li>
+        <li>Native (C#/Cocoa)</li>
+        </ul>
+        
+        
+        <p><img src="images/cross_platform.png" style="height: 700px;"/></p></li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Why OAuth2 Rocks</h1>
+        
+        <ul>
+        <li><p>Scopes</p>
+        
+        <ul>
+        <li><p>Explicit - Users know what they're allowing 3rd party apps to access
+        <img src="images/oauth-additionalscope.png" style="height: 700px;"/></p></li>
+        <li><p>Implicit - Pass through (AMA uses this for trusted apps)</p></li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Why OAuth2 Rocks</h1>
+        
+        <ul>
+        <li>Revoke Tokens
+        
+        <ul>
+        <li>Application</li>
+        <li>User
+        <br/>
+        <br/>
+        <br/>
+        <img src="images/yoink.jpg" style="height: 700px;"/></li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Why OAuth2 Rocks</h1>
+        
+        <ul>
+        <li>Libraries
+        
+        <ul>
+        <li>http://oauth.net/code/ - All the languages!
+        <br/>
+        <br/>
+        <br/>
+        <img src="images/ballmer.jpg" style="height: 700px;"/></li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <ul>
+        <li><p>Questions? Comments?
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/></p>
+        
+        <p>  <img src="images/question_mark.png" style="height: 700px; padding-left:200px"/></p></li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Refs</h1>
+        
+        <ul>
+        <li>http://wiki.oauth.net/w/page/12238520/Logo -- OAuth2 Logo</li>
+        <li>http://www.pokerupdate.com/assets/Managed/NewsArticles/hacker2.jpg -- Typing hacker keyboard</li>
+        <li>OAuth2 vs SAML2 -- http://www.mutuallyhuman.com/blog/2013/05/09/choosing-an-sso-strategy-saml-vs-oauth2/</li>
+        <li>http://setandbma.files.wordpress.com/2013/01/google.png -- Google Circle</li>
+        <li>http://www.stavangertravel.com/news/newcastle-stavanger-bergen-ferry-update-december_2013.cfm -- No Ferry</li>
+        <li>https://github.com/infews/keydown -- Used to make presentation</li>
+        <li>http://ryanonrails.github.com/oauth2-presentation/slides.html -- Presentation url</li>
+        <li>http://www.orbitvu.com.au/wp-content/uploads/6_cross-platform.png -- Cross platform</li>
+        <li>http://kinlane-productions.s3.amazonaws.com/api-evangelist/oauth/oauth-additionalscope.png -- Scopes</li>
+        <li>http://www.oliviawaite.com/blog/wp-content/uploads/2011/09/yoink128566261268737336.jpg -- Yoink</li>
+        <li>http://microsoft-news.com/wp-content/uploads/2011/05/steve-ballmer-300x300.jpg -- Ballmer</li>
+        <li>http://public.bn1.livefilestore.com/y2pSUkzJTx-IpocQb5QRCmCcG4q9p_qlfp5oo3tKWGP7X_Hs_I8UWFRMxQ2auE7ipcNNjheeuqigstVN727EsJ3XDDmvyFZIQchSd-E7P5Nc2Y/Help%2520Question%2520mark.png%3fpsid%3d1?rdrts=63952446 -- question mark</li>
+        <li>http://th09.deviantart.net/fs70/PRE/i/2011/328/7/f/google_apps_icons_16px_512px_by_carlosjj-d4h5mlv.png -- google app icons</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <!-- deck.js navigation extension -->
+    <a class='deck-prev-link' href='#' title='Previous'>&#8592;</a>
+    <a class='deck-next-link' href='#' title='Next'>&#8594;</a>
+    <!-- deck.js hash extension -->
+    <a class='deck-permalink' href='.' title='Permalink to this slide'>#</a>
+    <!-- deck.js status extension -->
+    <p class='deck-status'>
+      <span class='deck-status-current'></span>
+      /
+      <span class='deck-status-total'></span>
+    </p>
+    <!-- jQuery & deck.js -->
+    <script src="deck.js/support/jquery.1.6.4.min.js" type="text/javascript"></script>
+    <script src="deck.js/core/deck.core.js" type="text/javascript"></script>
+    <!-- deck.js extension JS files -->
+    <script src="deck.js/extensions/codemirror/codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/deck.codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clike/clike.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clojure/clojure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/coffeescript/coffeescript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/css/css.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/diff/diff.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/haskell/haskell.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/lua/lua.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/php/php.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/plsql/plsql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/python/python.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/r/r.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/rst/rst.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/ruby/ruby.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/scheme/scheme.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/smalltalk/smalltalk.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/sparql/sparql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/stex/stex.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/velocity/velocity.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xml/xml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xmlpure/xmlpure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/yaml/yaml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/goto/deck.goto.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/hash/deck.hash.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/menu/deck.menu.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/scale/deck.scale.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/status/deck.status.js" type="text/javascript"></script>
+    <!-- your custom JS here, including call to initialize deck.js-codemirror -->
+    <script src="js/oauth2-presentation.js" type="text/javascript"></script>
+    <!-- Initialize the deck. -->
+    <script type='text/javascript'>
+      $(function() { $.deck('.slide'); });
+    </script>
+  </body>
+</html>
